@@ -9,42 +9,37 @@
 </head>
 <body>
     <h1>Regra de Três Simples</h1>
+    <form action="#" method="post" onsubmit="calcularRegraDeTres(event)">
+        <div class="container">
+            <span>
+                <input type="number" name="a" id="a" step="any" placeholder="Valor de A" required>
+            </span>
+            <span class='estaPara'>ESTÁ PARA</span>
+            <span>
+                <input type="number" name="b" id="b" step="any" placeholder="Valor de B" required>
+            </span>
+        </div>
 
-    <div class="tudo">
-        <form action="#" method="post" onsubmit="calcularRegraDeTres(event)">
-            <div class="container">
-                <span>
-                    <input type="number" name="a" id="a" step="any" placeholder="Valor de A" required>
-                </span>
-                <span class='estPara'>ESTÁ PARA</span>
-                <span>
-                    <input type="number" name="b" id="b" step="any" placeholder="Valor de B" required>
-                </span>
+        <div id='assimComo'>ASSIM COMO</div>
+
+        <div class="container">
+            <span>
+                <input type="number" name="c" id="c" step="any" placeholder="Valor de C" required>
+            </span>
+            <span class='estaPara'>ESTÁ PARA</span>
+            <span>
+                <div id="x" class="x">X</div>
+            </span>
+        </div>
+
+        <div class='containerBtns'>
+            <input class="calcular" type="submit" value="CALCULAR">
+            <div id="resetContainer">
+                <input type="reset" value="LIMPAR" id="reset" onclick="limparCampos()">
+                <span id="resetText" onclick="limparCampos()">ou apenas R</span>
             </div>
-
-            <div id='assComo'>ASSIM COMO</div>
-
-            <div class="container">
-                <span>
-                    <input type="number" name="c" id="c" step="any" placeholder="Valor de C" required>
-                </span>
-                <span class='estPara'>ESTÁ PARA</span>
-                <span>
-                    <div id="x" class="x">X</div>
-                </span>
-            </div>
-
-            <div class='containerBtns'>
-                <input class="calcular" type="submit" value="CALCULAR">
-                <div id="resetContainer">
-                    <input type="reset" value="LIMPAR" id="reset" onclick="limparCampos()">
-                    <span id="resetText" onclick="limparCampos()">ou apenas R</span>
-                </div>
-            </div>
-            
-            <div></div>
-        </form>
-    </div>
+        </div>
+    </form>
 
     <script>
         function calcularRegraDeTres(event) {
